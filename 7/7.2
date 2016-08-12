@@ -1,0 +1,31 @@
+##7.2 测试和比较操作
+
+###7.2.1
+        
+
+###7.2.8
+        
+
+###7.2.9 SameValue(x, y)
+        内置的抽象操作 SameValue(x, y)， x和y是ECMAScript语言的值，返回true或false。比较规则如下：
+1. 如果x的数据类型与y的数据类型不一样， 返回false
+2. 如果x的数据类型是数字，则
+    * 如果x和y都是NaN，返回true
+    * 如果x是+0，y是-0，返回false
+    * 如果x是-0，y是+0，返回false
+    * 如果x和y数值相等，返回true
+    * 其他情况返回false
+3. 返回 SameValueNonNumber(x, y)
+
+###7.2.10 SameValueZero(x, y)
+        内置的抽象操作 SameValue(x, y)， x和y是ECMAScript语言的值，返回true或false。比较规则如下：
+1. 如果x的数据类型与y的数据类型不一样， 返回false
+2. 如果x的数据类型是数字，则
+    * 如果x和y都是NaN，返回true
+    * 如果x是+0，y是-0，返回true
+    * 如果x是-0，y是+0，返回true
+    * 如果x和y数值相等，返回true
+    * 其他情况返回false
+3. 返回 SameValueNonNumber(x, y)
+
+ 
